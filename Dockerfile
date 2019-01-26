@@ -4,7 +4,7 @@ ENV OSTICKET_VERSION=1.10.4
 RUN set -x \
     && apt-get update \
     && apt-get install -y git-core \
-    && git clone -b 1.10-bootstrap --depth 1 https://github.com/ryanlewis2010/osTicket.git \
+    && git clone -b develop --depth 1 https://github.com/ryanlewis2010/osTicket.git \
     && cd osTicket \
     && php manage.php deploy -sv /data/upload \
     # www-data is uid:gid 82:82 in php:7.0-fpm-alpine
